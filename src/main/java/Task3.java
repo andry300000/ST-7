@@ -58,6 +58,6 @@ public class Task3 {
     private static void saveForecast(String content) throws IOException {
         Path resultDir = Paths.get("result");
         Files.createDirectories(resultDir);
-        Files.writeString(resultDir.resolve("forecast.txt"), content, StandardCharsets.UTF_8);
+        Files.write(resultDir.resolve("forecast.txt"), content.getBytes(StandardCharsets.UTF_8));
     }
 }
